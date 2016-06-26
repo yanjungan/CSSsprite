@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>sprite</title>
+	<style>
+		h3, ul{
+			margin:0;
+			padding:0;
+		}
+		ul{list-style: none;}/* 去掉列表的点号 */
+		li h3{
+			font-size: 14px;
+			font-weight: 400;
+		}
+		li{
+			display: block;/* 由于初始化，margin:0;padding:0;,这样设置，就能设置height和line-height */
+			height: 31px;
+			line-height: 31px;/* 把line-height设置和height一样的目的，是让文字垂直居中 */
+			overflow: hidden;/* 防止元素内容溢出 */
+			border-bottom: 1px solid #dedede;/* 浅灰色 */
+		}
+		li i{/* 图片的样式 */
+			background: url(sidebar.png);
+			display: inline;/* display:inline元素不能设置宽高，因为它属于行布局，其特性是在一行里进行布局，所以不能被设定宽高。 */
+			width: 30px;
+			height: 24px;
+			float: left;
+			margin: 3px 10px;
+		}
+		.cat{/* 设置外围的边框 */
+			width: 150px;
+			background: #f8f8f8;
+			border: 1px solid #bbb;
+		}
+		.cat-1 i{
+			background-position: 0 0;
+		}
+		.cat-2 i{
+			background-position: 0 -24px;/* 每个图片高度24像素，注意一定是负值 */
+		}
+		.cat-3 i{
+			background-position: 0 -48px;
+		}
+		.cat-4 i{
+			background-position: 0 -72px;
+		}
+		.cat-5 i{
+			background-position: 0 -96px;
+		}
+		.cat-6 i{
+			background-position: 0 -120px;
+		}
+		.cat-7 i{
+			background-position: 0 -144px;
+		}
+		.cat-8 i{
+			background-position: 0 -168px;
+		}
+		.cat-9 i{
+			background-position: -40px 0;/* 用x轴进行偏移 */
+		}
+	</style>
+</head>
+<body>
+		 	<!-- 
+			=====================================================================
+		 	1.注意标签的语义化，无序列表需使用ul和li。
+		    2.标题部分要使用h3标签。
+		  	3.每个li结构当中会有一个i标签用来展示icon。
+		  	4.注意要reset H3的默认样式。
+		 	5.li和ul要去掉默认的样式。
+		 	6.为ul的容器div增加class，并设置样式。
+		 	7.①display:inline:任何不是块级元素的可见元素都是内联元素。其表现的特性是“行布局”形式!(行布局:其表现形式始终以行进行显示)
+			②float:left:指定元素脱离普通的文档流而产生的特别的布局特性。并且float必需应用在块级元素之上，也就是说浮动并不应用于内联标签。或者可以说如果应用了float这个元素将被指定为块级元素。
+			那么两者的区别显而易见:display:inline元素不能设置宽高，因为它属于行布局，其特性是在一行里进行布局，所以不能被设定宽高。
+			简单的说就是float可以设置宽高，然而display:inline;虽然也会浮动，但是他不能设置宽高。
+		 	========================================================================
+		 	 -->
+	<div class="cat">
+		<ul>
+			<li class="cat-1">
+				<i></i>
+				<h3>服装内衣</h3>
+			</li>
+			<li class="cat-2">
+				<i></i>
+				<h3>鞋包配饰</h3>
+			</li>
+			<li class="cat-3">
+				<i></i>
+				<h3>运动户外</h3>
+			</li>
+			<li class="cat-4">
+				<i></i>
+				<h3>珠宝手表</h3>
+			</li>
+			<li class="cat-5">
+				<i></i>
+				<h3>手机数码</h3>
+			</li>
+			<li class="cat-6">
+				<i></i>
+				<h3>办公家电脑</h3>
+			</li>
+			<li class="cat-7">
+				<i></i>
+				<h3>护肤彩妆</h3>
+			</li>
+			<li class="cat-8">
+				<i></i>
+				<h3>母婴用品</h3>
+			</li>
+			<li class="cat-9">
+				<i></i>
+				<h3>其他分类</h3>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>
